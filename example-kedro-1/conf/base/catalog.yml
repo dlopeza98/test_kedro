@@ -1,0 +1,11 @@
+example_spreadsheet:                        # Dataset Name
+  type: pandas.ExcelDataSet                  # Library to handle the operations
+  filepath: data/01_raw/ICAS Piragua.xlsx   # Relative file path
+  Load_args:                                 # Arguments used when we load data
+    engine: openpyxl     # A Python library to read/write Excel 2010 xlsx/xlsm files
+ 
+ product_data:     				     # Dataset name
+  type: pandas.CSVDataSet     		       # Library to handle the file operations
+  filepath: data/03_primary/ICAS Piragua Pivoted.csv  # File to read/write data
+  save_args:    				       # Arguments used when we save the dataset
+    index: false
